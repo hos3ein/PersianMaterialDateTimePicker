@@ -2,14 +2,19 @@
 
 ![Release](https://img.shields.io/github/release/hos3ein/PersianMaterialDateTimePicker.svg?maxAge=1593001)
 [![jitpack](https://jitpack.io/v/hos3ein/PersianMaterialDateTimePicker.svg)](https://jitpack.io/#hos3ein/PersianMaterialDateTimePicker)
+![minSDK](https://img.shields.io/badge/minSDK-14-red.svg)
 
 ## Forked from [https://github.com/mohamad-amin/PersianMaterialDateTimePicker](https://github.com/mohamad-amin/PersianMaterialDateTimePicker)
 
-![Screenshots](/resources/Screenshot_1.png)
-![Screenshots](/resources/Screenshot_2.png)
-![Screenshots](/resources/Screenshot_3.png)
-![Screenshots](/resources/Screenshot_4.png)
-![Screenshots](/resources/Screenshot_5.png)
+Download [sample](/resources/PersianMaterialDateTimePicker.apk)
+
+<img src="https://cdn.rawgit.com/hos3ein/PersianMaterialDateTimePicker/master/resources/Screenshot_1.png" width=250>
+<img src="https://cdn.rawgit.com/hos3ein/PersianMaterialDateTimePicker/master/resources/Screenshot_2.png" width=250>
+<img src="https://cdn.rawgit.com/hos3ein/PersianMaterialDateTimePicker/master/resources/Screenshot_3.png" width=250>
+
+<img src="https://cdn.rawgit.com/hos3ein/PersianMaterialDateTimePicker/master/resources/Screenshot_4.png" width=400>
+<img src="https://cdn.rawgit.com/hos3ein/PersianMaterialDateTimePicker/master/resources/Screenshot_5.png" width=400>
+
 
 Add it to your build.gradle with:
 ```gradle
