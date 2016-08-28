@@ -218,5 +218,9 @@ public abstract class MonthAdapter extends BaseAdapter implements OnDayClickList
         public int getDay() {
             return day;
         }
+
+        public PersianCalendar getPersianCalendar() {
+            return mPersianCalendar;
+        }
     }
 }
