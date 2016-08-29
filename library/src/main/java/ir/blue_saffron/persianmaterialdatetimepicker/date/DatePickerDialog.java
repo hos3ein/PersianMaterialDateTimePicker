@@ -551,6 +551,10 @@ public class DatePickerDialog extends DialogFragment implements
         return new MonthAdapter.CalendarDay(mPersianCalendar);
     }
 
+    public PersianCalendar getSelectedPersianDay() {
+        return mPersianCalendar;
+    }
+
     @Override
     public int getMinYear() {
         if (selectableDays != null) return selectableDays[0].getPersianYear();
