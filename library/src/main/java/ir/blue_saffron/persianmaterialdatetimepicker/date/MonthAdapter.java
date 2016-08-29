@@ -176,6 +176,7 @@ public abstract class MonthAdapter extends BaseAdapter implements OnDayClickList
         }
 
         public CalendarDay(PersianCalendar calendar) {
+            mPersianCalendar = calendar;
             year = calendar.getPersianYear();
             month = calendar.getPersianMonth();
             day = calendar.getPersianDay();
@@ -186,15 +187,18 @@ public abstract class MonthAdapter extends BaseAdapter implements OnDayClickList
         }
 
         public void set(CalendarDay date) {
+            mPersianCalendar = date.mPersianCalendar;
             year = date.year;
             month = date.month;
             day = date.day;
         }
 
         public void setDay(int year, int month, int day) {
-            this.year = year;
-            this.month = month;
-            this.day = day;
+            if(mPersianCalendar == null) {
+                mPersianCalendar = new PersianCalendar();
+            }
+            mPersianCalendar.setPersianDate(year, month, day);
+            setTime(mPersianCalendar.getTimeInMillis());
         }
 
         private void setTime(long timeInMillis) {
