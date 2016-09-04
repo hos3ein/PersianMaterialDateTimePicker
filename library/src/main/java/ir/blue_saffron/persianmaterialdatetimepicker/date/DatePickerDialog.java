@@ -117,6 +117,10 @@ public class DatePickerDialog extends DialogFragment implements
 
     public DatePickerDialog() {
         // Empty constructor required for dialog fragment.
+        mPersianCalendar.set(java.util.Calendar.HOUR_OF_DAY, 12);
+        mPersianCalendar.set(java.util.Calendar.MINUTE, 0);
+        mPersianCalendar.set(java.util.Calendar.SECOND, 0);
+        mPersianCalendar.set(java.util.Calendar.MILLISECOND, 0);
     }
 
     /**
