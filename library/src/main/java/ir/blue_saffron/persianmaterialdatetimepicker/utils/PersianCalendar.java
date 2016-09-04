@@ -279,8 +279,11 @@ public class PersianCalendar extends GregorianCalendar {
                 + ":" + formatToMilitary(get(SECOND));
     }
 
+    public String getGregorianShortDate() {
+        return "" + this.formatToMilitary(get(Calendar.YEAR)) + this.delimiter + this.formatToMilitary(get(Calendar.MONTH) + 1) + this.delimiter + this.formatToMilitary(get(Calendar.DAY_OF_MONTH));
+    }
     private String formatToMilitary(int i) {
-        return (i < 9) ? "0" + i : String.valueOf(i);
+        return (i < 10) ? "0" + i : String.valueOf(i);
     }
 
     /**
