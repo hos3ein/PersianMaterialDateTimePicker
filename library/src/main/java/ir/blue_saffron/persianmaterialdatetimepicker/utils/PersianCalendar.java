@@ -18,6 +18,7 @@
  */
 package ir.blue_saffron.persianmaterialdatetimepicker.utils;
 
+import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
@@ -280,7 +281,7 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     public String getGregorianShortDate() {
-        return "" + this.formatToMilitary(get(Calendar.YEAR)) + this.delimiter + this.formatToMilitary(get(Calendar.MONTH) + 1) + this.delimiter + this.formatToMilitary(get(Calendar.DATE));
+        return "" + this.formatToMilitary(get(Calendar.YEAR)) + this.delimiter + this.formatToMilitary(get(Calendar.MONTH) + 1) + this.delimiter + this.formatToMilitary(get(Calendar.DAY_OF_MONTH));
     }
     private String formatToMilitary(int i) {
         return (i < 10) ? "0" + i : String.valueOf(i);
