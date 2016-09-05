@@ -2,28 +2,26 @@
  * Persian Calendar see: http://code.google.com/p/persian-calendar/
  * Copyright (C) 2012  Mortezaadi@gmail.com
  * PersianCalendar.java
- * <p>
+ * <p/>
  * Persian Calendar is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * <p>
+ * <p/>
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * <p>
+ * <p/>
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package ir.blue_saffron.persianmaterialdatetimepicker.utils;
 
-import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.TimeZone;
 
 /**
- *
  * <strong> Persian(Shamsi) calendar </strong>
  * <p>
  * </p>
@@ -52,14 +50,14 @@ import java.util.TimeZone;
  * not synchronized with the phases of the Moon. </p>
  * <p>
  * </p>
- *
+ * <p/>
  * <p>
  * <strong>PersianCalendar</strong> by extending Default GregorianCalendar
  * provides capabilities such as:
  * </p>
  * <p>
  * </p>
- *
+ * <p/>
  * <li>you can set the date in Persian by setPersianDate(persianYear,
  * persianMonth, persianDay) and get the Gregorian date or vice versa</li>
  * <p>
@@ -85,7 +83,7 @@ import java.util.TimeZone;
  * </p>
  * <p>
  * </p>
- *
+ * <p/>
  * <pre>
  * {@code
  *       PersianCalendar persianCal = new PersianCalendar();
@@ -125,7 +123,7 @@ public class PersianCalendar extends GregorianCalendar {
 
     /**
      * default constructor
-     *
+     * <p/>
      * most of the time we don't care about TimeZone when we persisting Date or
      * doing some calculation on date. <strong> Default TimeZone was set to
      * "GMT" </strong> in order to make developer to work more convenient with
@@ -138,7 +136,7 @@ public class PersianCalendar extends GregorianCalendar {
 
     /**
      * default constructor
-     *
+     * <p/>
      * most of the time we don't care about TimeZone when we persisting Date or
      * doing some calculation on date. <strong> Default TimeZone was set to
      * "GMT" </strong> in order to make developer to work more convenient with
@@ -170,7 +168,6 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     /**
-     *
      * Determines if the given year is a leap year in persian calendar. Returns
      * true if the given year is a leap year.
      *
@@ -203,7 +200,6 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     /**
-     *
      * @return int persian month number
      */
     public int getPersianMonth() {
@@ -212,7 +208,6 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     /**
-     *
      * @return String persian month name
      */
     public String getPersianMonthName() {
@@ -221,7 +216,6 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     /**
-     *
      * @return int Persian day in month
      */
     public int getPersianDay() {
@@ -230,7 +224,15 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     /**
-     *
+     * @return The day of the week as an integer, where Saturday is 0 and Friday is 6.
+     */
+    public int getPersianWeekDay() {
+        if (get(DAY_OF_WEEK) == 7)
+            return 0;
+        return get(DAY_OF_WEEK);
+    }
+
+    /**
      * @return String Name of the day in week
      */
     public String getPersianWeekDayName() {
@@ -254,7 +256,6 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     /**
-     *
      * @return String of Persian Date ex: شنبه 01 خرداد 1361
      */
     public String getPersianLongDate() {
@@ -266,9 +267,8 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     /**
-     *
      * @return String of persian date formatted by
-     *         'YYYY[delimiter]mm[delimiter]dd' default delimiter is '/'
+     * 'YYYY[delimiter]mm[delimiter]dd' default delimiter is '/'
      */
     public String getPersianShortDate() {
         // calculatePersianDate();
@@ -281,8 +281,9 @@ public class PersianCalendar extends GregorianCalendar {
     }
 
     public String getGregorianShortDate() {
-        return "" + this.formatToMilitary(get(Calendar.YEAR)) + this.delimiter + this.formatToMilitary(get(Calendar.MONTH) + 1) + this.delimiter + this.formatToMilitary(get(Calendar.DAY_OF_MONTH));
+        return "" + this.formatToMilitary(get(YEAR)) + this.delimiter + this.formatToMilitary(get(MONTH) + 1) + this.delimiter + this.formatToMilitary(get(DAY_OF_MONTH));
     }
+
     private String formatToMilitary(int i) {
         return (i < 10) ? "0" + i : String.valueOf(i);
     }
@@ -292,17 +293,16 @@ public class PersianCalendar extends GregorianCalendar {
      * before 1 farvardin hejri (before epoch)
      *
      * @param field
-     * @param amount
-     *            <pre>
-     *  Usage:
-     *  {@code
-     *  addPersianDate(Calendar.YEAR, 2);
-     *  addPersianDate(Calendar.MONTH, 3);
-     *  }
-     * </pre>
-     *
-     *            u can also use Calendar.HOUR_OF_DAY,Calendar.MINUTE,
-     *            Calendar.SECOND, Calendar.MILLISECOND etc
+     * @param amount <pre>
+     *                                                          Usage:
+     *                                                          {@code
+     *                                                          addPersianDate(Calendar.YEAR, 2);
+     *                                                          addPersianDate(Calendar.MONTH, 3);
+     *                                                          }
+     *                                                         </pre>
+     *               <p/>
+     *               u can also use Calendar.HOUR_OF_DAY,Calendar.MINUTE,
+     *               Calendar.SECOND, Calendar.MILLISECOND etc
      */
     //
     public void addPersianDate(int field, int amount) {
@@ -331,8 +331,8 @@ public class PersianCalendar extends GregorianCalendar {
      *    and get the Persian Date.
      * </pre>
      *
-     * @see PersianDateParser
      * @param dateString
+     * @see PersianDateParser
      */
     public void parse(String dateString) {
         PersianCalendar p = new PersianDateParser(dateString, delimiter).getPersianDate();
