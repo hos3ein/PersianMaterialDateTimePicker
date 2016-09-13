@@ -1,8 +1,8 @@
 # PersianMaterialDateTimePicker
 
-![Release](https://img.shields.io/github/release/hos3ein/PersianMaterialDateTimePicker.svg?maxAge=1593134)
+![Release](https://img.shields.io/github/release/hos3ein/PersianMaterialDateTimePicker.svg?maxAge=1593135)
 [![jitpack](https://jitpack.io/v/hos3ein/PersianMaterialDateTimePicker.svg)](https://jitpack.io/#hos3ein/PersianMaterialDateTimePicker)
-![minSDK](https://img.shields.io/badge/minSDK-14-red.svg)
+![minSDK](https://img.shields.io/badge/minSDK-14+-red.svg)
 
 ## Forked from [https://github.com/mohamad-amin/PersianMaterialDateTimePicker](https://github.com/mohamad-amin/PersianMaterialDateTimePicker)
 
@@ -28,6 +28,6 @@ and:
 
 ```gradle
 dependencies {
-    compile 'com.github.hos3ein:PersianMaterialDateTimePicker:1.3.4'
+    compile 'com.github.hos3ein:PersianMaterialDateTimePicker:1.3.5'
 }
 ```
