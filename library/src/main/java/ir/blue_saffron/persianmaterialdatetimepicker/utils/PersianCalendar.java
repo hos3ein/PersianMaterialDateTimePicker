@@ -131,6 +131,7 @@ public class PersianCalendar extends GregorianCalendar {
      * GregorianCalendar by calling setTimeZone()
      */
     public PersianCalendar(long millis) {
+        this();
         setTimeInMillis(millis);
     }
 
@@ -145,6 +146,7 @@ public class PersianCalendar extends GregorianCalendar {
      */
     public PersianCalendar() {
         setTimeZone(TimeZone.getTimeZone("GMT"));
+        this.set(MILLISECOND, 0);
     }
 
     private long convertToMilis(long julianDate) {
