@@ -640,7 +640,7 @@ public abstract class MonthView extends View {
             return false;
         }
 
-        if (day > maxDate.getPersianMonth()) {
+        if (day > maxDate.getPersianDay()) {
             return true;
         } else {
             return false;
