@@ -28,6 +28,6 @@ and:
 
 ```gradle
 dependencies {
-    compile 'com.github.hos3ein:PersianMaterialDateTimePicker:1.3.5'
+    compile 'com.github.hos3ein:PersianMaterialDateTimePicker:1.3.7'
 }
 ```
