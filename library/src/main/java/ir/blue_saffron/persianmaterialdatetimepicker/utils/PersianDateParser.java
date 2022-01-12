@@ -110,7 +110,7 @@ public class PersianDateParser {
         checkPersianDateValidation(year, month, day);
 
         PersianCalendar pCal = new PersianCalendar();
-        pCal.setPersianDate(year, month, day);
+        pCal.setPersianDate(year, month - 1, day);
 
         return pCal;
     }
